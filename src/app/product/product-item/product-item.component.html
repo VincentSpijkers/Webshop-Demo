@@ -1,0 +1,11 @@
+<div class="productItemContainer">
+  <img [src]="product.imageUrl" height="150px"/>
+  <h3 id="productName">{{product.productName}}</h3>
+  <p id="productDescription">{{product.description}}</p>
+  <h4 id="productPrice">€{{product.price}}</h4>
+
+  <div class="itemButtonContainer">
+    <div id="addToCart"></div>
+    <div id="favorite" [style.backgroundColor]="product.isLiked ? 'red' : 'black'" (click)="addtoFavorite()"></div>
+  </div>
+</div>

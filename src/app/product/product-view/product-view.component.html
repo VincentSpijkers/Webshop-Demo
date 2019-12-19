@@ -1,0 +1,12 @@
+<div class="productContainer" *ngIf="productType === 'liked'; else elseBlock">
+  <div *ngFor="let product of products">
+    <app-product-item  *ngIf="product.isLiked" [product]="product"></app-product-item>
+  </div>
+</div>
+
+<!--create this one first -->
+<ng-template #elseBlock >
+  <div  class="productContainer">
+    <app-product-item *ngFor="let product of products" [product]="product"></app-product-item>
+  </div>
+</ng-template>
